@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Coordinate Finder</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Please input your coordinates</h1>
+  <form method="post" action="#" th:action="@{/coordinates}" th:object="${inputCoords}" >
+    <p>Latitude: <input type="text" th:field="*{gc_lat}" /></p>
+    <p>Longitude: <input type="text" th:field="*{gc_long}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+  </form>
+</body>
+</html>

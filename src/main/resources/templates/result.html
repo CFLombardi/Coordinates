@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Finder Results</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Result</h1>
+    <p th:text="'Latitude: ' + ${inputCoords.getgc_lat()}" />
+    <p th:text="'Longitude: ' + ${inputCoords.getgc_long()}" />
+    <a href="/coordinates">Submit new coordinates</a>
+</body>
+</html>
