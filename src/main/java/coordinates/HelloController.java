@@ -17,8 +17,7 @@ public class HelloController {
 
   @PostMapping("/coordinates")
   public String submitForm(@ModelAttribute("inputCoords") Coords inputCoords) {
-    inputCoords.calculateLat();
-    inputCoords.calculateLong();
+    inputCoords.convertCoords();
     return "result";
   }
 }

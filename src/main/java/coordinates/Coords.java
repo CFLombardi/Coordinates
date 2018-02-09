@@ -1,21 +1,21 @@
 package coordinates;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Coords {
+  private String spreadsheet = "C:\\git\\coordFinder\\target\\classes\\Grid Converter.xlsx";
+  private int gc_lat;
+  private char gc_dir;
+  private int gc_long;
 
-    private int gc_lat;
-    private char gc_dir;
-    private int gc_long;
-
-    public void calculateLat() {
+    public void convertCoords() throws IOException {
+      FileInputStream input = new FileInputStream(spreadsheet);
+      Workbook workbook = new XSSFWorkbook(input);
+      System.out.println("Workbook has "+workbook.getNumberOfSheets() + " sheets.");
       this.gc_lat += 1;
-    }
-
-    public void calculateLong() {
-      this.gc_long += 5;
-    }
-
-    public int getgc_lat() {
-      return gc_lat;
     }
 
     public void setgc_lat(int incLat) {
