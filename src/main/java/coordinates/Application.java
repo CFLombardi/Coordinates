@@ -14,11 +14,10 @@ public class Application {
   public static final String spreadsheet = "C:\\git\\coordFinder\\target\\classes\\Grid Converter.xlsx";
 
   public static void main(String[] args) throws IOException {
-    /*
     FileInputStream input = new FileInputStream(spreadsheet);
     Workbook workbook = new XSSFWorkbook(input);
     System.out.println("Workbook has "+workbook.getNumberOfSheets() + " sheets.");
-    */
+    
     SpringApplication.run(Application.class, args);
   }
 }
