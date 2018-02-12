@@ -6,8 +6,10 @@
 </head>
 <body>
 	<h1>Result</h1>
-    <p th:text="'Latitude: ' + ${inputCoords.getgc_lat()}" />
-    <p th:text="'Longitude: ' + ${inputCoords.getgc_long()}" />
+    <p th:text="'Latitude DD: ' + ${inputCoords.getgc_lat()}+' '+${inputCoords.getgc_dir()}" />
+    <p th:text="'Latitude DMS: '+${inputCoords.getLatDMS()}+' '+${inputCoords.getgc_dir()}" />
+    <p th:text="'Longitude DD: ' + ${inputCoords.getgc_long()}" />
+    <p th:text="'Longitude DMS: ' + ${inputCoords.getLongDMS()}" />
     <a href="/coordinates">Submit new coordinates</a>
 </body>
 </html>

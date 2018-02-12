@@ -4,7 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.validation.BindingResult;
 
 @Controller
 public class HelloController {
@@ -17,8 +18,7 @@ public class HelloController {
 
   @PostMapping("/coordinates")
   public String submitForm(@ModelAttribute("inputCoords") Coords inputCoords) {
-    inputCoords.calculateLat();
-    inputCoords.calculateLong();
+    inputCoords.convertCoords();
     return "result";
   }
 }
